@@ -20,8 +20,7 @@ else:
         print("EL TRIANGULO ES ESCALENO")
 print("---------------------------------------------")
 animal = input("Ingrese un animal: ")
-animal = animal.upper()
-if animal == "PERRO":
+if (animal := animal.upper()) == "PERRO":
     print("Este animal es el mejor amigo del hombre: ",animal)
 elif animal == "GATO":
     print("Este animal persigue a los ratones: ",animal)

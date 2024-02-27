@@ -11,8 +11,7 @@ def agregaranimales():
     nanimal = nuevoanimal.lower()
     animales.append(nanimal)
     print("Animal agregado exitosamente.")
-    repetir = int(input("1)Agregar mas \n2)volver al menu \n: "))
-    if repetir == 1:
+    if (repetir := int(input("1)Agregar mas \n2)volver al menu \n: "))) == 1:
         agregaranimales()
     if repetir == 2:
         menujuego()
@@ -23,8 +22,7 @@ def agregarcosas():
         ncosa = nuevacosa.lower()
         cosas.append(ncosa)
         print("Cosa agregada exitosamente.")
-        repetir = int(input("1)Agregar mas \n2)Volver al menu \n: "))
-        if repetir == 1:
+        if (repetir := int(input("1)Agregar mas \n2)Volver al menu \n: "))) == 1:
             agregarcosas()
         if repetir == 2:
             menujuego()
@@ -91,7 +89,7 @@ def descubrir_palabras():
 #MENU DEL JUEGO:
 def menujuego():
     while(True):
-     menu = int(input("""INSTRUCCIONES:
+     if (menu := int(input("""INSTRUCCIONES:
                  
                  Este juego consta de descubrir la palabra oculta que se encuentran en una lista de palabras,
                  dada dos listas una de animales y otra de cosas, usted tendra como ventaja elejir cuantas
@@ -103,8 +101,7 @@ def menujuego():
                  \n2) Registrar nuevas cosas 
                  \n3) Descubrir la palabra oculta 
                  \n4) Salir 
-                 \n:"""))
-     if menu == 1:
+                 \n:"""))) == 1:
          agregaranimales()
      elif menu == 2:
          agregarcosas()

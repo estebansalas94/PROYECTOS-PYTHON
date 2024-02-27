@@ -44,8 +44,7 @@ def modificar():
 
 def buscar():
   opcionn=input("ingrese el color que quiere buscar: ")
-  opcion=opcionn.lower()
-  if opcion==opcion:
+  if (opcion := opcionn.lower())==opcion:
     print(opcion, "=",diccionario[opcion])
   print("--------------------------------------------------------------------------------------------------------")
   
@@ -60,9 +59,8 @@ def salir():
 def menu():
  while(True):
   print("DICCIONARIO DE COLORES ESPAÑOL A INGLES")
-  opcion=int(input("elija la accion a realizar \n1)agregar datos al diccionario \n2)mostrar diccionario \n3)buscar por palabra(color) \n4)eliminar datos del diccionario \n5)modificar valores del diccionario \n6)salir del diccionario \n:"))
 
-  if opcion==1:
+  if (opcion := int(input("elija la accion a realizar \n1)agregar datos al diccionario \n2)mostrar diccionario \n3)buscar por palabra(color) \n4)eliminar datos del diccionario \n5)modificar valores del diccionario \n6)salir del diccionario \n:")))==1:
    agregar()
 
   if opcion==2:
