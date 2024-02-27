@@ -1,6 +1,7 @@
 #JUEGO PIEDRA, PAPEL O TIJERA
 
-import random
+import secrets
+
 piedra = 1
 papel = 2
 tijera = 3
@@ -8,7 +9,7 @@ print("usuario escoja una opcion: \n1)piedra, \n2)papel , \n3)tijera: ")
 usuario= int(input("usuario ingrese la opcion en numero: "))
 
 
-maquina = random.randint(1,3)
+maquina = secrets.SystemRandom().randint(1,3)
 print("opcion de maquina: ",maquina)
 if (maquina==1) and (usuario==3):
     print("su eleccion: tijera \neleccion de la maquina: piedra")

@@ -1,4 +1,5 @@
-from random import choice, randint, random
+from random import random
+import secrets
 
 animales = ["Gato","Leon","Tigre","Tiburon","Perro"]
 cosas = ["Carro","Casa","Moto","Jarra","Telefono"]
@@ -36,13 +37,13 @@ def descubrir_palabras():
   
 
      while len(lista) != cantidad_elegir:
-         if (randint(0,100) % 2 == 0) and cantidad_animales != 0:
-             animal_elegido = choice(animales)
+         if (secrets.SystemRandom().randint(0,100) % 2 == 0) and cantidad_animales != 0:
+             animal_elegido = secrets.SystemRandom().choice(animales)
              if animal_elegido not in lista:
                  lista.append(animal_elegido)
                  cantidad_animales -= 1
          elif (cantidad_cosas != 0):
-             cosa_elegida = choice(cosas)
+             cosa_elegida = secrets.SystemRandom().choice(cosas)
              if cosa_elegida not in lista:
                  lista.append(cosa_elegida)
                  cantidad_cosas -= 1
@@ -50,7 +51,7 @@ def descubrir_palabras():
      for i in range (len(lista)):
          lista[i] = lista[i].lower()
      print (lista)
-     palabra_oculta = choice(lista)
+     palabra_oculta = secrets.SystemRandom().choice(lista)
      print(palabra_oculta)
      intentos1 = 3
      intentos = 2
