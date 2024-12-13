@@ -1,6 +1,6 @@
-import random 
+import secrets
 
-numeromaquina = random.randint(1,5)
+numeromaquina = secrets.SystemRandom().randint(1,5)
 while(True):
     num = int(input("ingrese un numero de 1 a 5: "))
     if num==numeromaquina:
